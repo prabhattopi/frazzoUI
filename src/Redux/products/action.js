@@ -1,6 +1,7 @@
 import { ALERT } from "../alert/alerts";
 import { API_URL } from "../../utils/config";
 import axios from "axios";
+import { axiosInstance } from "../../axiosurl/url";
 
 //Action Types
 export const PROD_LOADING = "PROD_LOADING";
@@ -39,7 +40,8 @@ export const getProducts =() =>async(dispatch) => {
   try{
     dispatch({ type: ALERT, payload: { loading: true } });
 
-    let res=await axios.get(`${API_URL}/fraazo`)
+    let res=await axiosInstance.get("/fraazo")
+    console.log(res.data)
       
      
         dispatch(setAllProducts(res.data))

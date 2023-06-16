@@ -14,6 +14,7 @@ import { logout, reset } from "../../Redux/user/action";
 import SearchResults from "./SearchResults";
 import axios from "axios";
 import { PrivateRoute } from "../../App";
+import { axiosInstance } from "../../axiosurl/url";
 axios.defaults.withCredentials=true
 
 
@@ -35,7 +36,7 @@ const Navbar = () => {
   
   
   const getData=async(text)=>{
-      let res= await axios.get(`${API_URL}/search?name=${text}`)
+      let res= await axiosInstance.get(`${API_URL}/search?name=${text}`)
       setSearchResult(res.data)
   }
   useEffect(()=>{

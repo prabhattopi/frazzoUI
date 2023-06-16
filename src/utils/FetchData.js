@@ -1,8 +1,9 @@
 import axios from "axios";
 import { API_URL } from "./config";
+import { axiosInstance } from "../axiosurl/url";
 axios.defaults.withCredentials=true
 export const postAPI=async(url,post,token)=>{
-    const res=await axios.post(`${API_URL}/api/${url}`,post,{
+    const res=await axiosInstance.post(`/api/${url}`,post,{
         headers:{Authorization:token}
 
     })
@@ -12,7 +13,7 @@ export const postAPI=async(url,post,token)=>{
 
 
 export const getAPI=async(url,token)=>{
-    const res=await axios.get(`${API_URL}/api/${url}`,{
+    const res=await axiosInstance.get(`/api/${url}`,{
         headers:{Authorization:token}
 
     })
