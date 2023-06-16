@@ -14,6 +14,7 @@ export const login = (userlogin) => async (dispatch) => {
     dispatch({ type: ALERT, payload: { success: res.data.msg } });
     localStorage.setItem("logged", "prabhat");
   } catch (err) {
+    console.log(err)
     dispatch({ type: ALERT, payload: { errors: err.response.data.msg } });
   }
 };
