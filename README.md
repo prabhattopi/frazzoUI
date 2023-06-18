@@ -5,7 +5,9 @@
 
 **Original website link**: (https://fraazo.com/)
 
-**netlify link of our project**: (https://frazzokefall.netlify.app/)
+**vercel link of our project**: (https://frazzo-ui.vercel.app/)
+
+**backend link of our project**: (https://github.com/prabhattopi/FrazoBackened)
 
 
 ## collaborators:
